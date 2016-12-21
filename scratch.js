@@ -95,7 +95,7 @@ var engine = {
    * @notice: if you're using some kind of front-end framework, you might use callback to update DOM after scratch's render process
    *
    */
-  scratch: function(lang=this.lang, callback=defaultCallback, pattern=this.pattern, mode=this.mode) {
+  scratch: function(lang=this.lang, callback=this.defaultCallback, pattern=this.pattern, mode=this.mode) {
     // Get corresponding language pack
     var lang_path = mode.path + lang.toLowerCase() + '.json';
     var request = new XMLHttpRequest();
