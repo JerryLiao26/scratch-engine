@@ -44,7 +44,7 @@ Then the page will be rendered as:
   </body>
 </html>
 ```
-The language file should be placed at `./lang/language_name.js` relative to the path of scratch.js by default, but it's configurable!
+The language file should be placed at `./lang/language_name.js` relative to the path of the HTML file by default, but it's configurable!
 
 ## Strict mode
 If disabled, scratch will use near language packs if the specific language pack is not found. Like 'en-US' for 'en-UK'. Enabled by default. Currently under development.

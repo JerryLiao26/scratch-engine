@@ -162,6 +162,7 @@ var engine = {
           }
         }
         document.documentElement.innerHTML = stream; // Write back
+        callback(); // Callback
         return true;
       }
 
@@ -171,7 +172,6 @@ var engine = {
       }
     }
     request.send(null); // Ajax send
-    callback(); // Callback
     return true;
   }
 };
