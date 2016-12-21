@@ -88,7 +88,7 @@ var engine = {
 
   defaultCallback: function() {
     console.info('Scratch: no external callback called, process done');
-  }
+  },
 
   /*
    * Execute function, nice and easy
