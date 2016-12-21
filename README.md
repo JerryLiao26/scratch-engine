@@ -2,11 +2,11 @@
 Scratch-engine is a simple and pure Javascript web component without any other dependencies. It's mainly designed for multi-language websites to change language-related text on browser-side.
 
 ## Usage
-On your webpage, use
+On your webpage, use:
 ```html
 <script src='./static/js/scratch.js'></script>
 ```
-to introduce scratch-engine. Then when you're ready, like the `onload` event is triggered, just simply use scratch like this
+to introduce scratch-engine. Then when you're ready, like the `onload` event is triggered, just simply use scratch like this:
 ```html
 <body onload="engine.scratch()">
 ```
@@ -32,7 +32,7 @@ And the html file is like this:
   </body>
 </html>
 ```
-Then the page will be rendered as
+Then the page will be rendered as:
 ```html
 <html>
   <head>
