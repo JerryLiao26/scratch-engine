@@ -3,25 +3,25 @@ Scratch-engine is a simple and pure Javascript web component without any other d
 
 ## Usage
 On your webpage, use
-```
+```html
 <script src='./static/js/scratch.js'></script>
 ```
 to introduce scratch-engine. Then when you're ready, like the `onload` event is triggered, just simply use scratch like this
-```
+```html
 <body onload="engine.scratch()">
 ```
 then the page would be rendered as expected. Scratch read the browser language by default, if you want to use multi-language, just make sure you have the corresponding language pack and use `engine.scratch(language_name)`
 
 ## Language pack
 You should create a json file with the name of the language *(in lower cases)* as a language pack. The data format is `tag_name: text`. For example, you have a file named `zh-cn.js` with content as follows:
-```
+```json
 {
   "html_title": "你好，世界",
   "body_content": "文本内容"
 }
 ```
 And the html file is like this:
-```
+```html
 <html>
   <head>
     <title>{:html_title:}</title>
@@ -33,7 +33,7 @@ And the html file is like this:
 </html>
 ```
 Then the page will be rendered as
-```
+```html
 <html>
   <head>
     <title>你好，世界</title>
@@ -54,7 +54,7 @@ For multi-language use. Store the original un-rendered page in `localStorage` so
 
 ## One-time settings
 The scratch function is like:
-```
+```js
 scratch: function(lang, callback, pattern, mode){
   // Code
 }
@@ -62,19 +62,19 @@ scratch: function(lang, callback, pattern, mode){
 - `lang` is the name string of the language.
 - `callback` is a callback function for those front-end frameworks with js render method to re-render DOM components.
 - `pattern` defines template tag that would be replaced by scratch is a json with following pattern:
-```
+```json
   {
-    'prefix': '{:',
-    'suffix': ':}'
+    "prefix": "{:",
+    "suffix": ":}"
   }
 ```
 - `mode` defines several important settings, formatted as follows. Details are covered in next part:
-```
+```json
   {
-    'empty': '',
-    'strict': true,
-    'motion': true,
-    'path': './lang/'
+    "empty": "",
+    "strict": true,
+    "motion": true,
+    "path": "./lang/"
   }
 ```
 
